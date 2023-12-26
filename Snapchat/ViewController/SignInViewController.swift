@@ -21,8 +21,10 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
         loginButton.layer.cornerRadius = loginButton.frame.size.height/2
-        
         signupButton.layer.cornerRadius = signupButton.frame.size.height/2
+        
+        passwordTextField.isSecureTextEntry = true
+ 
     }
     
     
