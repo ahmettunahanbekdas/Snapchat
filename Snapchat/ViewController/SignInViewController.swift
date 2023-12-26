@@ -27,8 +27,15 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func loginButtonF(_ sender: Any) {
-        print("LogIn")
-        performSegue(withIdentifier: "tooFeedVC", sender: nil)
+        if emailTextField.text != "" && passwordTextField.text != ""{
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
+                if error != nil {
+                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                } else {
+                    self.performSegue(withIdentifier: "tooFeedVC", sender: nil)
+                }
+            }
+        }
     }
     
     
