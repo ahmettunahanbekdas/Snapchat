@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0059782B3B54B40023DF20 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0059772B3B54B40023DF20 /* AlertExtension.swift */; };
 		0E123DB12B3B15B30053EFF2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E123DB02B3B15B30053EFF2 /* FeedViewController.swift */; };
 		0E123DB32B3B15C20053EFF2 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E123DB22B3B15C20053EFF2 /* UploadViewController.swift */; };
 		0E123DB52B3B15D30053EFF2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E123DB42B3B15D30053EFF2 /* SettingsViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0059772B3B54B40023DF20 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		0E123DB02B3B15B30053EFF2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0E123DB22B3B15C20053EFF2 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		0E123DB42B3B15D30053EFF2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E0059792B3B551A0023DF20 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E0059772B3B54B40023DF20 /* AlertExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0E123DB62B3B1E2D0053EFF2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +102,9 @@
 		0EE6FEC32B3ABB870030CE2A /* Snapchat */ = {
 			isa = PBXGroup;
 			children = (
-				0E123DB72B3B1E7E0053EFF2 /* Delegates */,
 				0E123DB62B3B1E2D0053EFF2 /* ViewController */,
+				0E0059792B3B551A0023DF20 /* Extensions */,
+				0E123DB72B3B1E7E0053EFF2 /* Delegates */,
 				0EE6FECA2B3ABB870030CE2A /* Main.storyboard */,
 				0EE6FECF2B3ABB880030CE2A /* LaunchScreen.storyboard */,
 				0EE6FECD2B3ABB880030CE2A /* Assets.xcassets */,
@@ -190,6 +201,7 @@
 				0E123DB12B3B15B30053EFF2 /* FeedViewController.swift in Sources */,
 				0EE6FEC72B3ABB870030CE2A /* SceneDelegate.swift in Sources */,
 				0E123DB52B3B15D30053EFF2 /* SettingsViewController.swift in Sources */,
+				0E0059782B3B54B40023DF20 /* AlertExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

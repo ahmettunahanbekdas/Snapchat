@@ -7,10 +7,9 @@
 
 import UIKit
 import Firebase
-import FirebaseCore
 
 class SignInViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -25,15 +24,36 @@ class SignInViewController: UIViewController {
         
         signupButton.layer.cornerRadius = signupButton.frame.size.height/2
     }
-
- 
+    
+    
     @IBAction func loginButtonF(_ sender: Any) {
         print("LogIn")
         performSegue(withIdentifier: "tooFeedVC", sender: nil)
     }
     
+    
     @IBAction func signupButtonF(_ sender: Any) {
-        print("SignUp")
+        if emailTextField.text != "" && passwordTextField.text != "" && usernameTextField.text != "" {
+            
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { auth, error in
+                if error != nil {
+                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                }else {
+                    let fireStore = Firestore.firestore()
+                    let userDictonary = ["email": self.emailTextField.text!,"username": self.usernameTextField.text!] as [String:Any]
+            
+                    fireStore.collection("UserInfo").addDocument(data: userDictonary) { error in
+                        if error != nil {
+                            self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                        }
+                    }
+                    self.performSegue(withIdentifier: "tooFeedVC", sender: nil)
+                }
+            }
+        }else{
+            self.makeAlert(title: "Error", message: "Please Enter Password/Username/Email")
+        }
     }
 }
+
 

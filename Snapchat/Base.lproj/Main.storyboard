@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-34.351145038167935" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="-492" y="-27"/>
         </scene>
         <!--Upload-->
         <scene sceneID="PAz-rr-iad">
@@ -158,30 +158,82 @@
                     <view key="view" contentMode="scaleToFill" id="h33-fv-mZn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black Red Swift Blade Logo-3" translatesAutoresizingMaskIntoConstraints="NO" id="cRn-vP-NqR">
+                                <rect key="frame" x="41" y="147" width="310" height="458"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="5sM-Au-CLR">
+                                <rect key="frame" x="156" y="59" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhp-Pw-ISd">
+                                <rect key="frame" x="129" y="668" width="134" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="uploadButtonTapped:" destination="YkM-u1-IDs" eventType="touchUpInside" id="0wF-b0-bFM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="v5x-Yl-X0y"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.98785895109176636" blue="0.002851458266377449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="qqY-zf-4Re"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="qqY-zf-4Re">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="uploadButton" destination="rhp-Pw-ISd" id="Ota-Im-7bh"/>
+                        <outlet property="uploadImage" destination="cRn-vP-NqR" id="fnJ-oh-Wkh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37g-UG-MmX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="-27"/>
+            <point key="canvasLocation" x="745.80152671755718" y="750.70422535211276"/>
         </scene>
-        <!--Settings-->
+        <!--Log Out-->
         <scene sceneID="ac8-Ni-1pa">
             <objects>
                 <viewController id="N3x-1R-gcE" customClass="SettingsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v9x-8o-ewL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENN-bj-H58">
+                                <rect key="frame" x="89" y="390" width="215" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="N3x-1R-gcE" eventType="touchUpInside" id="TqA-Ce-d5x"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="650-If-Cpw">
+                                <rect key="frame" x="156" y="59" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sVa-tR-c6c"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.98785895109176636" blue="0.002851458266377449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="s.circle.fill" catalog="system" id="apF-yR-eFD"/>
+                    <tabBarItem key="tabBarItem" title="Log Out" image="l.circle.fill" catalog="system" id="JnL-FJ-6WN"/>
+                    <navigationItem key="navigationItem" id="KLL-Xq-qL4"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="ENN-bj-H58" id="hZj-Ob-FA5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVA-CP-ALa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="687"/>
+            <point key="canvasLocation" x="1906" y="751"/>
         </scene>
         <!--Feed-->
         <scene sceneID="mps-vC-Liq">
@@ -190,43 +242,77 @@
                     <view key="view" contentMode="scaleToFill" id="DdW-Zp-aNW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="uY3-aU-yZ3">
+                                <rect key="frame" x="156" y="59" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MBK-dr-gIO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.98785895109176636" blue="0.002851458266377449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="f.circle.fill" catalog="system" id="TLF-RT-5Nf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edr-8l-eUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="-748"/>
+            <point key="canvasLocation" x="-492" y="751"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pBK-ne-aHD">
             <objects>
                 <tabBarController id="5Bj-9T-3n9" sceneMemberID="viewController">
                     <value key="contentSizeForViewInPopover" type="size" width="1" height="0.0"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zXV-1l-agI">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="zXV-1l-agI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.98785895109176636" blue="0.002851458266377449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="1" green="0.98785895109176636" blue="0.002851458266377449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="QoK-Wp-HVt" kind="relationship" relationship="viewControllers" id="erw-EQ-iud"/>
                         <segue destination="YkM-u1-IDs" kind="relationship" relationship="viewControllers" id="gAx-jI-CoX"/>
-                        <segue destination="N3x-1R-gcE" kind="relationship" relationship="viewControllers" id="DWt-e4-NYO"/>
+                        <segue destination="N3x-1R-gcE" kind="relationship" relationship="viewControllers" id="aDs-mE-y5e"/>
+                        <segue destination="k2F-w2-9zG" kind="show" identifier="toSnap" id="GcF-wz-TbP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zk-d7-a8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="747" y="-27"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="sAH-2n-6c8">
+            <objects>
+                <viewController id="k2F-w2-9zG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d84-Y8-dmo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="H14-Uj-Qm9">
+                                <rect key="frame" x="156" y="20" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wxk-ly-68p"/>
+                        <color key="backgroundColor" red="1" green="0.98785895109176636" blue="0.002851458266377449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hj6-Zb-bWP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4f-kS-chg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927" y="-27"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Black Red Swift Blade Logo-3" width="500" height="500"/>
         <image name="f.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="s.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="l.circle.fill" catalog="system" width="128" height="123"/>
         <image name="snapchat-icon-1701" width="1600" height="1136"/>
         <image name="u.circle.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
