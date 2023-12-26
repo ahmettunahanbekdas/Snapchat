@@ -53,6 +53,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E123DB62B3B1E2D0053EFF2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EE6FEC82B3ABB870030CE2A /* SignInViewController.swift */,
+				0E123DB02B3B15B30053EFF2 /* FeedViewController.swift */,
+				0E123DB22B3B15C20053EFF2 /* UploadViewController.swift */,
+				0E123DB42B3B15D30053EFF2 /* SettingsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0E123DB72B3B1E7E0053EFF2 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0EE6FEC42B3ABB870030CE2A /* AppDelegate.swift */,
+				0EE6FEC62B3ABB870030CE2A /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		0EE6FEB82B3ABB870030CE2A = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +92,8 @@
 		0EE6FEC32B3ABB870030CE2A /* Snapchat */ = {
 			isa = PBXGroup;
 			children = (
-				0EE6FEC82B3ABB870030CE2A /* SignInViewController.swift */,
-				0E123DB02B3B15B30053EFF2 /* FeedViewController.swift */,
-				0E123DB22B3B15C20053EFF2 /* UploadViewController.swift */,
-				0E123DB42B3B15D30053EFF2 /* SettingsViewController.swift */,
-				0EE6FEC42B3ABB870030CE2A /* AppDelegate.swift */,
-				0EE6FEC62B3ABB870030CE2A /* SceneDelegate.swift */,
+				0E123DB72B3B1E7E0053EFF2 /* Delegates */,
+				0E123DB62B3B1E2D0053EFF2 /* ViewController */,
 				0EE6FECA2B3ABB870030CE2A /* Main.storyboard */,
 				0EE6FECF2B3ABB880030CE2A /* LaunchScreen.storyboard */,
 				0EE6FECD2B3ABB880030CE2A /* Assets.xcassets */,

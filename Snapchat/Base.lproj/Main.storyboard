@@ -154,7 +154,7 @@
         <!--Upload-->
         <scene sceneID="PAz-rr-iad">
             <objects>
-                <viewController id="YkM-u1-IDs" sceneMemberID="viewController">
+                <viewController id="YkM-u1-IDs" customClass="UploadViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h33-fv-mZn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,12 +165,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37g-UG-MmX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651" y="276"/>
+            <point key="canvasLocation" x="1650" y="-27"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="ac8-Ni-1pa">
+            <objects>
+                <viewController id="N3x-1R-gcE" customClass="SettingsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v9x-8o-ewL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sVa-tR-c6c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="s.circle.fill" catalog="system" id="apF-yR-eFD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVA-CP-ALa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="687"/>
         </scene>
         <!--Feed-->
         <scene sceneID="mps-vC-Liq">
             <objects>
-                <viewController id="QoK-Wp-HVt" sceneMemberID="viewController">
+                <viewController id="QoK-Wp-HVt" customClass="FeedViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DdW-Zp-aNW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edr-8l-eUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651" y="-331"/>
+            <point key="canvasLocation" x="1650" y="-748"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pBK-ne-aHD">
@@ -196,6 +212,7 @@
                     <connections>
                         <segue destination="QoK-Wp-HVt" kind="relationship" relationship="viewControllers" id="erw-EQ-iud"/>
                         <segue destination="YkM-u1-IDs" kind="relationship" relationship="viewControllers" id="gAx-jI-CoX"/>
+                        <segue destination="N3x-1R-gcE" kind="relationship" relationship="viewControllers" id="DWt-e4-NYO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zk-d7-a8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -205,6 +222,7 @@
     </scenes>
     <resources>
         <image name="f.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="s.circle.fill" catalog="system" width="128" height="123"/>
         <image name="snapchat-icon-1701" width="1600" height="1136"/>
         <image name="u.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
