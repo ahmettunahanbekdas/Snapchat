@@ -44,7 +44,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                         if error == nil {
                             let imageUrl = url?.absoluteString
                             let fireStore = Firestore.firestore()
-                            let snapDictonary = ["imageUrl": imageUrl!, "snapOwner": UserSingleton.sharedUserInfo.userName, "date": FieldValue.serverTimestamp()] as [String:Any]
+                            let snapDictonary = ["imageUrl": imageUrl!, "snapOwner": UserSingleton.sharedUserInfo.userName!, "date": FieldValue.serverTimestamp()] as [String:Any]
                             fireStore.collection("Snaps").addDocument(data: snapDictonary) { error in
                                 if error != nil {
                                     self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")

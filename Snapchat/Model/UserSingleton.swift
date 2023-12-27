@@ -11,8 +11,8 @@ class UserSingleton {
     
     static let sharedUserInfo = UserSingleton()
     
-    var email = ""
-    var userName = ""
+    var email: String?
+    var userName: String?
     
     private init(){
         
