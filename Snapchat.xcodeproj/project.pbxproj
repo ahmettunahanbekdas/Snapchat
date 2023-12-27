@@ -22,6 +22,7 @@
 		0EE6FECC2B3ABB870030CE2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE6FECA2B3ABB870030CE2A /* Main.storyboard */; };
 		0EE6FECE2B3ABB880030CE2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE6FECD2B3ABB880030CE2A /* Assets.xcassets */; };
 		0EE6FED12B3ABB880030CE2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE6FECF2B3ABB880030CE2A /* LaunchScreen.storyboard */; };
+		0EF3822E2B3C7D2B0053434B /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF3822D2B3C7D2B0053434B /* UserSingleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		0EE6FECD2B3ABB880030CE2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EE6FED02B3ABB880030CE2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EE6FED22B3ABB880030CE2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EF3822D2B3C7D2B0053434B /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		0EE6FEC32B3ABB870030CE2A /* Snapchat */ = {
 			isa = PBXGroup;
 			children = (
+				0EF3822C2B3C7D120053434B /* Model */,
 				0E123DB62B3B1E2D0053EFF2 /* ViewController */,
 				0E0059792B3B551A0023DF20 /* Extensions */,
 				0E123DB72B3B1E7E0053EFF2 /* Delegates */,
@@ -112,6 +115,14 @@
 				0EADED8F2B3ABFE600210473 /* GoogleService-Info.plist */,
 			);
 			path = Snapchat;
+			sourceTree = "<group>";
+		};
+		0EF3822C2B3C7D120053434B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EF3822D2B3C7D2B0053434B /* UserSingleton.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF3822E2B3C7D2B0053434B /* UserSingleton.swift in Sources */,
 				0EE6FEC92B3ABB870030CE2A /* SignInViewController.swift in Sources */,
 				0E123DB32B3B15C20053EFF2 /* UploadViewController.swift in Sources */,
 				0EE6FEC52B3ABB870030CE2A /* AppDelegate.swift in Sources */,

@@ -27,7 +27,6 @@ class SignInViewController: UIViewController {
  
     }
     
-    
     @IBAction func loginButtonF(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != ""{
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
@@ -39,8 +38,7 @@ class SignInViewController: UIViewController {
             }
         }
     }
-    
-    
+
     @IBAction func signupButtonF(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" && usernameTextField.text != "" {
             
