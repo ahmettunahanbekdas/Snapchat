@@ -245,19 +245,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="uY3-aU-yZ3">
-                                <rect key="frame" x="156" y="59" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="uY3-aU-yZ3">
+                                <rect key="frame" x="156" y="59" width="81" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Gwf-Ux-Wku"/>
+                                </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hbx-au-RRP">
+                                <rect key="frame" x="0.0" y="147" width="393" height="622"/>
+                                <color key="backgroundColor" red="1" green="0.98785895109176636" blue="0.002851458266377449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.98785895109176636" blue="0.002851458266377449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MBK-dr-gIO"/>
                         <color key="backgroundColor" red="1" green="0.98785895109176636" blue="0.002851458266377449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hbx-au-RRP" firstAttribute="bottom" secondItem="MBK-dr-gIO" secondAttribute="bottom" id="9r5-XH-F2G"/>
+                            <constraint firstItem="Hbx-au-RRP" firstAttribute="top" secondItem="uY3-aU-yZ3" secondAttribute="bottom" constant="8" symbolic="YES" id="MEu-QD-hsD"/>
+                            <constraint firstItem="uY3-aU-yZ3" firstAttribute="centerX" secondItem="Hbx-au-RRP" secondAttribute="centerX" id="McE-Mx-VPm"/>
+                            <constraint firstItem="Hbx-au-RRP" firstAttribute="trailing" secondItem="MBK-dr-gIO" secondAttribute="trailing" id="Mut-bG-n7o"/>
+                            <constraint firstItem="uY3-aU-yZ3" firstAttribute="top" secondItem="MBK-dr-gIO" secondAttribute="top" id="cuZ-tQ-5ga"/>
+                            <constraint firstItem="uY3-aU-yZ3" firstAttribute="leading" secondItem="MBK-dr-gIO" secondAttribute="leading" constant="156" id="owX-q1-Q1O"/>
+                            <constraint firstItem="Hbx-au-RRP" firstAttribute="leading" secondItem="MBK-dr-gIO" secondAttribute="leading" id="qon-GE-XSa"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="f.circle.fill" catalog="system" id="TLF-RT-5Nf"/>
+                    <connections>
+                        <outlet property="tableView" destination="Hbx-au-RRP" id="Ekz-K6-kmg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edr-8l-eUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="751"/>
+            <point key="canvasLocation" x="-492.36641221374043" y="750.70422535211276"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pBK-ne-aHD">
