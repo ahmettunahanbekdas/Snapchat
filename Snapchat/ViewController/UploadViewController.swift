@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
+import FirebaseFirestore
+
 
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -21,11 +25,41 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         uploadImage.addGestureRecognizer(tapImage)
         uploadImage.isUserInteractionEnabled = true
     }
-    
 
     @IBAction func uploadButtonTapped(_ sender: Any) {
+        let storage = Storage.storage()
+        let storafeReferance = storage.reference()
         
+        let mediaFolder = storafeReferance.child("media")
         
+        if let data = uploadImage.image?.jpegData(compressionQuality: 0.5) {
+            let uuid = UUID().uuidString
+            
+            let imageReferance = mediaFolder.child("\(uuid).jpg")
+            imageReferance.putData(data, metadata: nil) { metaData, error in
+                if error != nil {
+                    self.makeAlert(title: "Resim dönüştürülüp dataya ekleniyor", message: error?.localizedDescription ?? "Error")
+                }else {
+                    imageReferance.downloadURL { url, error in
+                        if error == nil {
+                            let imageUrl = url?.absoluteString
+                            let fireStore = Firestore.firestore()
+                            let snapDictonary = ["imageUrl": imageUrl!, "snapOwner": UserSingleton.sharedUserInfo.userName, "date": FieldValue.serverTimestamp()] as [String:Any]
+                            fireStore.collection("Snaps").addDocument(data: snapDictonary) { error in
+                                if error != nil {
+                                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                                } else {
+                                    self.makeAlert(title: "Succes", message: "Shared Your Photo ✌🏻")
+                                    self.tabBarController?.selectedIndex = 0
+                                    self.uploadImage.image = UIImage(named: "addPhoto")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
     }
     
     @objc func tapImage() {
@@ -42,5 +76,4 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         self.dismiss(animated: true)
     }
-    
 }
