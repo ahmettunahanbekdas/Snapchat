@@ -10,6 +10,7 @@ import Firebase
 
 class SignInViewController: UIViewController {
     
+//MARK: - @IBOutlet and Variables
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,6 +18,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
+    //MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,28 +29,16 @@ class SignInViewController: UIViewController {
  
     }
     
-    @IBAction func loginButtonF(_ sender: Any) {
-        if emailTextField.text != "" && passwordTextField.text != ""{
-            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
-                if error != nil {
-                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
-                } else {
-                    self.performSegue(withIdentifier: "tooFeedVC", sender: nil)
-                }
-            }
-        }
-    }
-
+    //MARK: - signupButtonTapped()
     @IBAction func signupButtonF(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" && usernameTextField.text != "" {
             
-            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { auth, error in
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
                 if error != nil {
                     self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
                 }else {
                     let fireStore = Firestore.firestore()
                     let userDictonary = ["email": self.emailTextField.text!,"username": self.usernameTextField.text!] as [String:Any]
-            
                     fireStore.collection("UserInfo").addDocument(data: userDictonary) { error in
                         if error != nil {
                             self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
@@ -59,6 +49,21 @@ class SignInViewController: UIViewController {
             }
         }else{
             self.makeAlert(title: "Error", message: "Please Enter Password/Username/Email")
+        }
+    }
+    
+    //MARK: - loginButtonTapped()
+    @IBAction func loginButtonF(_ sender: Any) {
+        if emailTextField.text != "" && passwordTextField.text != ""{
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authData, error in
+                if error != nil {
+                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                } else {
+                    self.performSegue(withIdentifier: "tooFeedVC", sender: nil)
+                }
+            }
+        } else {
+            self.makeAlert(title: "Error", message: "Error")
         }
     }
 }

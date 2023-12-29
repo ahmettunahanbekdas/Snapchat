@@ -8,10 +8,8 @@
 import UIKit
 import Firebase
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    
+class FeedViewController: UIViewController {
+// MARK: - @IBOutlet and Variables
     @IBOutlet weak var tableView: UITableView!
     
     let fireStoreDatabase = Firestore.firestore()
@@ -19,13 +17,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var userEmailArray = [String]()
     var documentIDArray = [String]()
     
+// MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
         getUserInfo()
     }
     
+    // MARK: - getUserInfo()
     func getUserInfo() {
         fireStoreDatabase.collection("UserInfo").whereField("email", isEqualTo: Auth.auth().currentUser!.email!).getDocuments { snapShot, error in
             if error != nil {
@@ -33,7 +31,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }else {
                 if snapShot?.isEmpty != true {
                     for document in snapShot!.documents {
-
                         if let userName = document.get("username") as? String {
                             UserSingleton.sharedUserInfo.userName = userName
                         }
@@ -44,16 +41,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userNameArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = userNameArray[indexPath.row]
-        return cell
     }
 }
 

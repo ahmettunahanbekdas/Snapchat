@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="bcH-FI-JxA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="bcH-FI-JxA">
                                 <rect key="frame" x="66" y="59" width="260" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -160,11 +160,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black Red Swift Blade Logo-3" translatesAutoresizingMaskIntoConstraints="NO" id="cRn-vP-NqR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="cRn-vP-NqR">
                                 <rect key="frame" x="41" y="147" width="310" height="458"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="5sM-Au-CLR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5sM-Au-CLR">
                                 <rect key="frame" x="156" y="59" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -219,7 +219,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="tooSignInVC" modalPresentationStyle="fullScreen" id="feL-qg-cfI"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="650-If-Cpw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="650-If-Cpw">
                                 <rect key="frame" x="156" y="59" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -245,7 +245,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="uY3-aU-yZ3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snapchatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uY3-aU-yZ3">
                                 <rect key="frame" x="156" y="59" width="81" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Gwf-Ux-Wku"/>
@@ -312,7 +312,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchat-icon-1701" translatesAutoresizingMaskIntoConstraints="NO" id="H14-Uj-Qm9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snapchatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="H14-Uj-Qm9">
                                 <rect key="frame" x="156" y="20" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -328,10 +328,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Black Red Swift Blade Logo-3" width="500" height="500"/>
+        <image name="addPhoto" width="500" height="500"/>
         <image name="f.circle.fill" catalog="system" width="128" height="123"/>
         <image name="l.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="snapchat-icon-1701" width="1600" height="1136"/>
+        <image name="snapchatIcon" width="1600" height="1136"/>
         <image name="u.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
