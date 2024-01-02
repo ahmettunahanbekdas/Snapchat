@@ -11,6 +11,10 @@
 		0E123DB12B3B15B30053EFF2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E123DB02B3B15B30053EFF2 /* FeedViewController.swift */; };
 		0E123DB32B3B15C20053EFF2 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E123DB22B3B15C20053EFF2 /* UploadViewController.swift */; };
 		0E123DB52B3B15D30053EFF2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E123DB42B3B15D30053EFF2 /* SettingsViewController.swift */; };
+		0EAC8BE92B441E69001B140D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC8BE82B441E69001B140D /* FeedCell.swift */; };
+		0EAC8BEC2B44257A001B140D /* Snaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC8BEB2B44257A001B140D /* Snaps.swift */; };
+		0EAC8BF42B443396001B140D /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAC8BF32B443396001B140D /* SnapViewController.swift */; };
+		0EAC8BF72B443485001B140D /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 0EAC8BF62B443485001B140D /* SDWebImageSVGCoder */; };
 		0EADED902B3ABFE600210473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EADED8F2B3ABFE600210473 /* GoogleService-Info.plist */; };
 		0EADED932B3AC1F700210473 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0EADED922B3AC1F700210473 /* FirebaseAnalytics */; };
 		0EADED952B3AC1F700210473 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0EADED942B3AC1F700210473 /* FirebaseAuth */; };
@@ -30,6 +34,9 @@
 		0E123DB02B3B15B30053EFF2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0E123DB22B3B15C20053EFF2 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		0E123DB42B3B15D30053EFF2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0EAC8BE82B441E69001B140D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		0EAC8BEB2B44257A001B140D /* Snaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snaps.swift; sourceTree = "<group>"; };
+		0EAC8BF32B443396001B140D /* SnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
 		0EADED8F2B3ABFE600210473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0EE6FEC12B3ABB870030CE2A /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE6FEC42B3ABB870030CE2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 				0EADED932B3AC1F700210473 /* FirebaseAnalytics in Frameworks */,
 				0EADED992B3AC1F700210473 /* FirebaseStorage in Frameworks */,
 				0EADED952B3AC1F700210473 /* FirebaseAuth in Frameworks */,
+				0EAC8BF72B443485001B140D /* SDWebImageSVGCoder in Frameworks */,
 				0EADED972B3AC1F700210473 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +80,7 @@
 				0E123DB02B3B15B30053EFF2 /* FeedViewController.swift */,
 				0E123DB22B3B15C20053EFF2 /* UploadViewController.swift */,
 				0E123DB42B3B15D30053EFF2 /* SettingsViewController.swift */,
+				0EAC8BF32B443396001B140D /* SnapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -83,6 +92,14 @@
 				0EE6FEC62B3ABB870030CE2A /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		0EAC8BEA2B441FA2001B140D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0EAC8BE82B441E69001B140D /* FeedCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		0EE6FEB82B3ABB870030CE2A = {
@@ -104,6 +121,7 @@
 		0EE6FEC32B3ABB870030CE2A /* Snapchat */ = {
 			isa = PBXGroup;
 			children = (
+				0EAC8BEA2B441FA2001B140D /* Cell */,
 				0EF3822C2B3C7D120053434B /* Model */,
 				0E123DB62B3B1E2D0053EFF2 /* ViewController */,
 				0E0059792B3B551A0023DF20 /* Extensions */,
@@ -121,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF3822D2B3C7D2B0053434B /* UserSingleton.swift */,
+				0EAC8BEB2B44257A001B140D /* Snaps.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +165,7 @@
 				0EADED942B3AC1F700210473 /* FirebaseAuth */,
 				0EADED962B3AC1F700210473 /* FirebaseFirestore */,
 				0EADED982B3AC1F700210473 /* FirebaseStorage */,
+				0EAC8BF62B443485001B140D /* SDWebImageSVGCoder */,
 			);
 			productName = Snapchat;
 			productReference = 0EE6FEC12B3ABB870030CE2A /* Snapchat.app */;
@@ -177,6 +197,7 @@
 			mainGroup = 0EE6FEB82B3ABB870030CE2A;
 			packageReferences = (
 				0EADED912B3AC1F700210473 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0EAC8BF52B443485001B140D /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
 			);
 			productRefGroup = 0EE6FEC22B3ABB870030CE2A /* Products */;
 			projectDirPath = "";
@@ -209,11 +230,14 @@
 				0EF3822E2B3C7D2B0053434B /* UserSingleton.swift in Sources */,
 				0EE6FEC92B3ABB870030CE2A /* SignInViewController.swift in Sources */,
 				0E123DB32B3B15C20053EFF2 /* UploadViewController.swift in Sources */,
+				0EAC8BF42B443396001B140D /* SnapViewController.swift in Sources */,
 				0EE6FEC52B3ABB870030CE2A /* AppDelegate.swift in Sources */,
 				0E123DB12B3B15B30053EFF2 /* FeedViewController.swift in Sources */,
+				0EAC8BEC2B44257A001B140D /* Snaps.swift in Sources */,
 				0EE6FEC72B3ABB870030CE2A /* SceneDelegate.swift in Sources */,
 				0E123DB52B3B15D30053EFF2 /* SettingsViewController.swift in Sources */,
 				0E0059782B3B54B40023DF20 /* AlertExtension.swift in Sources */,
+				0EAC8BE92B441E69001B140D /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +459,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0EAC8BF52B443485001B140D /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		0EADED912B3AC1F700210473 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -446,6 +478,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0EAC8BF62B443485001B140D /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EAC8BF52B443485001B140D /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
+		};
 		0EADED922B3AC1F700210473 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0EADED912B3AC1F700210473 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
