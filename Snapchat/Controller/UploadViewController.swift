@@ -80,8 +80,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                                 self.tabBarController?.selectedIndex = 0
                                                 self.uploadImage.image = UIImage(named: "addPhoto")
                                                 print("Snapshot is empty: \(snapShot?.isEmpty ?? true)")
-
-
                                             }
                                         }
                                     }

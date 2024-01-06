@@ -370,6 +370,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hj6-Zb-bWP"/>
                     <connections>
+                        <outlet property="snapIconImage" destination="H14-Uj-Qm9" id="dAv-9o-aI7"/>
                         <outlet property="timeLabel" destination="ggp-o2-kWD" id="zoK-4J-PcQ"/>
                     </connections>
                 </viewController>

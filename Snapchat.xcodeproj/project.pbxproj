@@ -75,16 +75,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		0E123DB62B3B1E2D0053EFF2 /* ViewController */ = {
+		0E123DB62B3B1E2D0053EFF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				0EE6FEC82B3ABB870030CE2A /* SignInViewController.swift */,
-				0E123DB02B3B15B30053EFF2 /* FeedViewController.swift */,
 				0E123DB22B3B15C20053EFF2 /* UploadViewController.swift */,
+				0E123DB02B3B15B30053EFF2 /* FeedViewController.swift */,
 				0E123DB42B3B15D30053EFF2 /* SettingsViewController.swift */,
 				0EAC8BF32B443396001B140D /* SnapViewController.swift */,
 			);
-			path = ViewController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		0E123DB72B3B1E7E0053EFF2 /* Delegates */ = {
@@ -125,7 +125,7 @@
 			children = (
 				0EAC8BEA2B441FA2001B140D /* Cell */,
 				0EF3822C2B3C7D120053434B /* Model */,
-				0E123DB62B3B1E2D0053EFF2 /* ViewController */,
+				0E123DB62B3B1E2D0053EFF2 /* Controller */,
 				0E0059792B3B551A0023DF20 /* Extensions */,
 				0E123DB72B3B1E7E0053EFF2 /* Delegates */,
 				0EE6FECA2B3ABB870030CE2A /* Main.storyboard */,

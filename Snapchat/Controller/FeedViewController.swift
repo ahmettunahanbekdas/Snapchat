@@ -22,7 +22,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var snapArray = [Snap]()
     var chosenSnap: Snap?
-    var chosenTimeLeft: Int?
     
     
     // MARK: - viewDidLoad()
@@ -57,11 +56,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                                                 
                                             }
                                         }
-                                        self.chosenTimeLeft = 24 - difference
-                                        print("İLK ZAMAN ZAMAN ZAMAN \(difference)")
+                                      
+                                        let snap = Snap(userName: userName, imageUrlArray: imageUrlArray, date: date.dateValue(), timeDifference: 24 - difference)
+                                        self.snapArray.append(snap)
                                     }
-                                    let snap = Snap(userName: userName, imageUrlArray: imageUrlArray, date: date.dateValue())
-                                    self.snapArray.append(snap)
+                                    
                                 }
                             }
                         }
@@ -109,7 +108,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         if segue.identifier == "toSnapVC"{
             let destinationVC = segue.destination as? SnapViewController
             destinationVC?.selectedSnap = chosenSnap
-            destinationVC?.selectedTimeLeft = chosenTimeLeft
             
         }
     }
