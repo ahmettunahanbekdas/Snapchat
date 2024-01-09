@@ -8,13 +8,9 @@
 import Foundation
 
 class UserSingleton {
-    
     static let sharedUserInfo = UserSingleton()
-    
     var email: String?
     var userName: String?
-    
     private init(){
-        
     }
 }

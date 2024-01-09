@@ -62,7 +62,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                                     if error == nil {
                                                         self.tabBarController?.selectedIndex = 0
                                                         self.uploadImage.image = UIImage(named: "addPhoto")
-                                                        self.makeAlert(title: "Succes", message: "Shared Your Second Photo ✌🏻")
+                                                        self.makeAlert(title: "Succes", message: "Shared Photo ✌🏻")
                                                     }else {
                                                         self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
 
@@ -76,7 +76,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                             if error != nil {
                                                 self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
                                             } else {
-                                                self.makeAlert(title: "Succes", message: "Shared Your First Photo ✌🏻")
+                                                self.makeAlert(title: "Succes", message: "Shared Photo ✌🏻")
                                                 self.tabBarController?.selectedIndex = 0
                                                 self.uploadImage.image = UIImage(named: "addPhoto")
                                                 print("Snapshot is empty: \(snapShot?.isEmpty ?? true)")
