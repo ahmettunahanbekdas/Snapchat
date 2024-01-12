@@ -6,6 +6,6 @@ This application was developed using Firebase. Users can log in to the app and s
 - Kingfisher
 - Firebase 
 
-## Screen Recording
+# Screen Recording
  https://github.com/ahmettunahanbekdas/Snapchat/assets/97003033/350a855d-b10b-482b-90b5-ff5b5ad4c9d4
 
